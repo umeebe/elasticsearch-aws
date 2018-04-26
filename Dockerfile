@@ -61,6 +61,7 @@ VOLUME /usr/share/elasticsearch/data
 
 COPY docker-entrypoint.sh /
 
+RUN chmod +x /docker-entrypoint.sh
 RUN elasticsearch-plugin install analysis-icu
 RUN elasticsearch-plugin install ingest-attachment
 RUN elasticsearch-plugin install ingest-user-agent
